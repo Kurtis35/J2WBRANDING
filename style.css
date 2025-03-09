@@ -1,29 +1,80 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
     text-align: center;
-    background-color: #f8f9fa;
 }
 
 header {
-    background: #001f3f;
+    background: url('header-image.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-    padding: 20px;
 }
 
-.about, .services, .testimonials {
-    margin: 20px;
-    padding: 20px;
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.about, .why-choose-us, .services, .testimonials, .customers, .contact {
     background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-container, .testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service, .testimonial {
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+}
+
+.customer-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.customer-logos img {
+    width: 100px;
+    height: auto;
 }
 
 footer {
-    background: #001f3f;
+    background: #222;
     color: white;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
 }
