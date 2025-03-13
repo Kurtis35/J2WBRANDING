@@ -9,7 +9,7 @@ body {
     font-family: 'Caladea', serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 a {
@@ -32,6 +32,7 @@ ul {
     --global_main_color: #1872ed;
     --white: #ffffff;
     --light_gray: #f2f2f2;
+    --dark_overlay: rgba(0, 0, 0, 0.7);
     --text_color: #333;
     --text_color_light: #666;
 }
@@ -65,6 +66,7 @@ ul {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .header-wrapper {
@@ -144,9 +146,11 @@ ul {
 .hero-video {
     flex: 1;
     text-align: right;
+    position: relative;
 }
 
-.hero-video video {
+.hero-video video,
+.hero-video img {
     max-width: 100%;
     background: transparent;
     box-shadow: none;
@@ -186,7 +190,7 @@ ul {
 /* Why Choose Us Section */
 .why-choose-us {
     padding: 60px 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/why-choose-us.jpg') no-repeat center center;
+    background: linear-gradient(var(--dark_overlay), var(--dark_overlay)), url('assets/images/why-choose-us.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
     color: #fff;
@@ -229,7 +233,7 @@ ul {
 }
 
 .why-choose-image img {
-    display: none; /* Image is part of the background */
+    display: none; /* Image is handled by CSS background */
 }
 
 .learn-more {
@@ -245,7 +249,7 @@ ul {
 }
 
 .learn-more:hover {
-    color: # ASCIIMath: #135bb5;
+    color: #135bb5;
 }
 
 /* Services Section */
@@ -560,7 +564,8 @@ footer {
         text-align: center;
     }
 
-    .hero-video video {
+    .hero-video video,
+    .hero-video img {
         max-height: 200px;
     }
 
