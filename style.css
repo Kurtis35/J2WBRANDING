@@ -79,7 +79,6 @@ ul {
     font-size: 24px;
     font-weight: bold;
     color: var(--text_color);
-    text-decoration: none;
     transition: color 0.3s ease;
 }
 
@@ -108,6 +107,9 @@ ul {
 .hero {
     padding: 60px 20px;
     background-color: var(--white);
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-wrapper {
@@ -123,7 +125,7 @@ ul {
 }
 
 .hero-content h1 {
-    font-size: 60px;
+    font-size: 70px;
     margin-bottom: 16px;
     line-height: 1.1;
     font-weight: normal;
@@ -138,7 +140,7 @@ ul {
 }
 
 .subtitle {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--text_color_light);
     margin-bottom: 0;
 }
@@ -152,15 +154,17 @@ ul {
 .hero-video video,
 .hero-video img {
     max-width: 100%;
-    background: transparent;
-    box-shadow: none;
-    border: none;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 /* About Section */
 .about {
     padding: 60px 20px;
-    background-color: var(--light_gray);
+    background: linear-gradient(var(--dark_overlay), var(--dark_overlay)), url('assets/images/about-background.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
 }
 
 .about-wrapper {
@@ -179,6 +183,18 @@ ul {
     margin-bottom: 15px;
     text-transform: uppercase;
     font-weight: normal;
+    position: relative;
+}
+
+.about-wrapper h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: var(--global_main_color);
 }
 
 .about-wrapper p {
@@ -233,7 +249,8 @@ ul {
 }
 
 .why-choose-image img {
-    display: none; /* Image is handled by CSS background */
+    max-width: 100%;
+    height: auto;
 }
 
 .learn-more {
@@ -509,7 +526,7 @@ footer {
     color: var(--global_main_color);
 }
 
-/* AOS Animation Overrides */
+/* AOS Animation */
 [data-aos] {
     opacity: 0;
     transition-property: transform, opacity;
@@ -629,7 +646,6 @@ footer {
     }
 }
 
-/* Larger Screens */
 @media (min-width: 1200px) {
     .container {
         max-width: 1400px;
