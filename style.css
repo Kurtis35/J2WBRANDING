@@ -30,8 +30,8 @@ ul {
 /* Variables */
 :root {
     --global_main_color: #1872ed;
-    --modules_color: #f9f9f9;
-    --modules_color_second: #ffffff;
+    --white: #ffffff;
+    --light_gray: #f2f2f2;
     --text_color: #333;
     --text_color_light: #666;
 }
@@ -43,10 +43,11 @@ ul {
 }
 
 .section-header h2 {
-    font-size: 40px;
+    font-size: 36px;
     color: var(--text_color);
     margin-bottom: 10px;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 .section-header hr.small {
@@ -60,7 +61,7 @@ ul {
 /* Header */
 .main-header {
     padding: 20px 0;
-    background-color: var(--modules_color_second);
+    background-color: var(--white);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -103,8 +104,8 @@ ul {
 
 /* Hero Section */
 .hero {
-    padding: 100px 20px;
-    background-color: var(--modules_color_second);
+    padding: 60px 20px;
+    background-color: var(--white);
 }
 
 .hero-wrapper {
@@ -120,7 +121,7 @@ ul {
 }
 
 .hero-content h1 {
-    font-size: 70px;
+    font-size: 60px;
     margin-bottom: 16px;
     line-height: 1.1;
     font-weight: normal;
@@ -135,9 +136,9 @@ ul {
 }
 
 .subtitle {
-    font-size: 22px;
+    font-size: 20px;
     color: var(--text_color_light);
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .hero-video {
@@ -147,69 +148,59 @@ ul {
 
 .hero-video video {
     max-width: 100%;
-    background: none;
+    background: transparent;
     box-shadow: none;
     border: none;
 }
 
 /* About Section */
 .about {
-    padding: 80px 20px;
-    background-color: var(--modules_color);
+    padding: 60px 20px;
+    background-color: var(--light_gray);
 }
 
 .about-wrapper {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
-    background-color: var(--modules_color_second);
-    padding: 40px;
+    background-color: var(--white);
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .about-wrapper h2 {
-    font-size: 28px;
+    font-size: 24px;
     color: var(--text_color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 .about-wrapper p {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text_color_light);
     line-height: 1.8;
 }
 
 /* Why Choose Us Section */
 .why-choose-us {
-    padding: 80px 20px;
-    background: url('assets/images/why-choose-us.jpg') no-repeat center center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/why-choose-us.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
     color: #fff;
 }
 
-.why-choose-us::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
 .why-choose-wrapper {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
     max-width: 800px;
     margin: 0 auto;
-    background-color: var(--modules_color_second);
-    padding: 40px;
+    background-color: var(--white);
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -220,14 +211,15 @@ ul {
 }
 
 .why-choose-text h2 {
-    font-size: 28px;
+    font-size: 24px;
     color: var(--text_color);
     margin-bottom: 10px;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 .why-choose-text p {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text_color_light);
 }
 
@@ -245,21 +237,21 @@ ul {
     align-items: center;
     gap: 10px;
     color: var(--global_main_color);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 15px;
     transition: color 0.3s ease;
 }
 
 .learn-more:hover {
-    color: #135bb5;
+    color: # ASCIIMath: #135bb5;
 }
 
 /* Services Section */
 .services {
-    padding: 80px 20px;
-    background-color: var(--modules_color_second);
+    padding: 60px 20px;
+    background-color: var(--white);
 }
 
 .services-grid {
@@ -272,7 +264,7 @@ ul {
 
 .service-card {
     width: 300px;
-    background-color: var(--modules_color);
+    background-color: var(--light_gray);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -292,15 +284,16 @@ ul {
 .service-card h3 {
     padding: 15px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text_color);
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 /* Testimonials Section */
 .testimonials {
-    padding: 80px 20px;
-    background-color: var(--modules_color);
+    padding: 60px 20px;
+    background-color: var(--light_gray);
 }
 
 .testimonials-grid {
@@ -313,17 +306,17 @@ ul {
 
 .testimonial-card {
     width: 300px;
-    background-color: var(--modules_color_second);
+    background-color: var(--white);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-card p {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text_color_light);
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .testimonial-author {
@@ -333,20 +326,20 @@ ul {
 }
 
 .author-name {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: var(--text_color);
 }
 
 .stars {
     color: #f5c518;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Customers Section */
 .customers {
-    padding: 80px 20px;
-    background-color: var(--modules_color_second);
+    padding: 60px 20px;
+    background-color: var(--white);
 }
 
 .customers-grid {
@@ -370,8 +363,8 @@ ul {
 
 /* Contact Section */
 .contact {
-    padding: 80px 20px;
-    background-color: var(--modules_color);
+    padding: 60px 20px;
+    background-color: var(--light_gray);
 }
 
 .contact-wrapper {
@@ -390,7 +383,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .contact-item i {
@@ -399,7 +392,7 @@ ul {
 }
 
 .contact-item p {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text_color_light);
 }
 
@@ -410,15 +403,15 @@ ul {
 .contact-form form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 15px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
     outline: none;
 }
@@ -429,7 +422,7 @@ ul {
 }
 
 .contact-form button {
-    padding: 15px;
+    padding: 12px;
     background-color: var(--global_main_color);
     color: #fff;
     border: none;
@@ -447,7 +440,7 @@ ul {
 /* Footer */
 footer {
     padding: 40px 20px;
-    background-color: var(--modules_color_second);
+    background-color: var(--white);
     border-top: 1px solid #eee;
 }
 
@@ -556,11 +549,11 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .subtitle {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .hero-video {
@@ -572,7 +565,7 @@ footer {
     }
 
     .section-header h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .about-wrapper {
@@ -638,6 +631,6 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 80px;
+        font-size: 70px;
     }
 }
