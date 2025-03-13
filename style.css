@@ -34,7 +34,7 @@ body {
 
 .hero-wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 50px;
 }
@@ -50,9 +50,17 @@ body {
     line-height: 1.1;
 }
 
-.hero-content p {
+.black-text {
+    color: #000000;
+}
+
+.blue-text {
+    color: var(--global_main_color); /* #1872ed */
+}
+
+.subtitle {
     font-size: 22px;
-    color: #666;
+    color: #666666;
     margin-bottom: 20px;
 }
 
@@ -65,8 +73,8 @@ body {
 .icon-link {
     text-decoration: none;
     color: #000;
-    font-size: 16px;
-    padding: 5px 10px;
+    font-size: 20px;
+    padding: 5px;
     transition: color 0.3s ease;
 }
 
@@ -82,8 +90,8 @@ body {
 .hero-video video {
     max-width: 100%;
     max-height: 400px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
@@ -101,7 +109,7 @@ body {
         font-size: 45px;
     }
 
-    .hero-content p {
+    .subtitle {
         font-size: 18px;
     }
 
