@@ -28,18 +28,33 @@ body {
 
 /* Hero Section */
 .hero {
-    text-align: center;
     padding: 100px 20px;
     background-color: var(--modules_color);
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
 }
 
 .hero-content h1 {
     font-size: 70px;
     margin-bottom: 16px;
+    line-height: 1.1;
 }
 
 .hero-content h1 span {
     color: var(--global_main_color);
+    text-decoration: underline;
+    text-decoration-color: var(--global_main_color);
+    text-decoration-thickness: 3px;
 }
 
 .hero-content p {
@@ -47,11 +62,45 @@ body {
     color: #666;
 }
 
-.hero-image {
-    max-width: 100%;
-    margin-top: 30px;
+.hero-video {
+    flex: 1;
+    text-align: right;
 }
 
+.hero-video video {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .hero-video {
+        text-align: center;
+    }
+
+    .hero-video video {
+        max-height: 200px;
+    }
+}
 /* About Section */
 .about {
     padding: 100px 20px;
