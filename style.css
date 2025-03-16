@@ -47,12 +47,15 @@ body {
     color: #666;
 }
 
-.hero-image {
+.hero-video {
     max-width: 100%;
     margin-top: 30px;
+    border: none;
+    background: none;
+    outline: none;
 }
 
-/* About Section */
+/* [Rest of the CSS remains unchanged for now] */
 .about {
     padding: 100px 20px;
     text-align: center;
@@ -77,17 +80,22 @@ hr.small {
     color: #555;
 }
 
-/* Why Choose Us Section */
 .why-choose {
     padding: 100px 20px;
     background-color: var(--global_main_color);
     color: #fff;
+    position: relative;
 }
 
 .why-choose-content {
     display: flex;
     align-items: center;
     gap: 50px;
+    background-image: url('assets/images/why-choose-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .why-choose-text {
@@ -137,7 +145,6 @@ hr.small {
     border-radius: 5px;
 }
 
-/* Services Section */
 .services {
     padding: 100px 20px;
     text-align: center;
@@ -184,7 +191,6 @@ hr.small {
     margin-top: 15px;
 }
 
-/* Testimonials Section */
 .testimonials {
     padding: 100px 20px;
     text-align: center;
@@ -247,7 +253,6 @@ hr.small {
     font-size: 16px;
 }
 
-/* Customers Section */
 .customers {
     padding: 100px 20px;
     text-align: center;
@@ -273,7 +278,6 @@ hr.small {
     margin-top: 20px;
 }
 
-/* Videos Section */
 .videos {
     padding: 100px 20px;
     text-align: center;
@@ -298,7 +302,6 @@ hr.small {
     border-radius: 8px;
 }
 
-/* Contact Section */
 .contact {
     padding: 100px 20px;
     text-align: center;
@@ -424,7 +427,6 @@ hr.small {
     border-radius: 5px;
 }
 
-/* Footer */
 footer {
     padding: 20px;
     background-color: var(--footer_back);
@@ -459,7 +461,6 @@ footer {
     text-decoration: none;
 }
 
-/* Back to Top */
 .gotoTop {
     position: fixed;
     bottom: 20px;
@@ -479,7 +480,6 @@ footer {
     background-size: contain;
 }
 
-/* Responsive Design */
 @media (max-width: 767px) {
     .hero-content h1 {
         font-size: 45px;
