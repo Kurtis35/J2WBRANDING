@@ -31,7 +31,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--modules_color_second);
+    background-color: #000000; /* Changed to black */
     padding: 10px 20px;
     z-index: 1000;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .nav-links a {
-    color: var(--footer_links_color);
+    color: #ffffff; /* Changed to white for contrast against black background */
     text-decoration: none;
     font-size: 16px;
 }
@@ -57,7 +57,7 @@ body {
     text-align: center;
     padding: 100px 20px;
     background-color: var(--modules_color_second);
-    min-height: 400px; /* Ensure enough space for content */
+    min-height: 400px;
 }
 
 .hero .container {
@@ -94,7 +94,6 @@ body {
     outline: none;
 }
 
-/* [Rest of the CSS remains unchanged for now] */
 .about {
     padding: 100px 20px;
     text-align: center;
