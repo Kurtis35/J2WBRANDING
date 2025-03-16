@@ -26,11 +26,50 @@ body {
     padding: 0 15px;
 }
 
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--modules_color_second);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: var(--footer_links_color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: var(--global_main_color);
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
     background-color: var(--modules_color_second);
+    min-height: 400px; /* Ensure enough space for content */
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
 }
 
 .hero-content h1 {
@@ -48,8 +87,8 @@ body {
 }
 
 .hero-video {
-    max-width: 100%;
-    margin-top: 30px;
+    flex: 1;
+    max-width: 50%;
     border: none;
     background: none;
     outline: none;
@@ -91,9 +130,6 @@ hr.small {
     display: flex;
     align-items: center;
     gap: 50px;
-    background-image: url('assets/images/why-choose-bg.jpg');
-    background-size: cover;
-    background-position: center;
     padding: 40px;
     border-radius: 10px;
 }
@@ -526,7 +562,16 @@ footer {
         text-align: center;
     }
 
-    .nav-pages {
-        justify-content: center;
+    .nav-links {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero-video {
+        max-width: 100%;
     }
 }
