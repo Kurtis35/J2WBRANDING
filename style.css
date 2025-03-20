@@ -138,7 +138,7 @@ hr.small {
 
 .why-choose-content {
     position: relative;
-    min-height: 400px; /* Ensure enough height for video */
+    min-height: 600px; /* Ensure enough height for video */
     display: flex;
     align-items: flex-start; /* Align items to the top */
     background-image: url('assets/images/Blue Orange and White Illustrative Marketing Video (2).mp4'); /* Fallback background image */
