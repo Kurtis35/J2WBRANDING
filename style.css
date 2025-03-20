@@ -248,7 +248,7 @@ hr.small {
     background-color: var(--modules_color);
 }
 
-.testimonials-grid {
+.testimonials-grid
     display: flex;
     justify-content: center;
     gap: 30px;
