@@ -141,9 +141,9 @@ hr.small {
     min-height: 400px; /* Ensure enough height for video */
     display: flex;
     align-items: flex-start; /* Align items to the top */
-    background-image: url('assets/images/Blue Orange and White Illustrative Marketing Video (2).mp4'); /* Fallback background image */
+    background-image: url('assets/images/why-choose-bg.jpg'); /* Fallback background image */
     background-size: cover;
-    background-position: centre;
+    background-position: center;
 }
 
 .why-choose-video {
@@ -160,17 +160,17 @@ hr.small {
     position: relative;
     z-index: 1;
     flex: 0 0 auto; /* Prevent text box from stretching */
-    margin-right: bottom left auto; /* Push text box to the left */
+    margin-right: auto; /* Push text box to the left */
 }
 
 .why-choose-card {
     background-color: #fff;
     color: #000;
-    padding: 15px; /* Reduced padding for smaller size */
+    padding: 20px; /* Match screenshot padding */
     border-radius: 8px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px; /* Smaller width for minimal background */
+    width: 250px; /* Match screenshot width */
     height: auto; /* Auto height to fit content */
     display: flex;
     flex-direction: column;
@@ -178,19 +178,20 @@ hr.small {
 }
 
 .why-choose-text h2 {
-    font-size: 24px; /* Smaller font size */
+    font-size: 28px; /* Match screenshot font size */
+    font-weight: bold;
     margin: 0; /* Remove default margins */
 }
 
 .why-choose-text .line {
-    width: 30px; /* Smaller line width */
+    width: 40px; /* Match screenshot line width */
     height: 2px;
     background-color: var(--global_main_color);
-    margin: 8px 0;
+    margin: 10px 0;
 }
 
 .why-choose-text p {
-    font-size: 14px; /* Smaller font size */
+    font-size: 16px; /* Match screenshot font size */
     color: #666;
     margin: 0; /* Remove default margins */
 }
