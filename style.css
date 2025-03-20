@@ -141,7 +141,7 @@ hr.small {
     min-height: 400px; /* Ensure enough height for video */
     display: flex;
     align-items: flex-start; /* Align items to the top */
-    background-image: url('assets/images/why-choose-bg.jpg'); /* Fallback background image */
+    background-image: url('assets/images/Blue Orange and White Illustrative Marketing Video (2).mp4'); /* Fallback background image */
     background-size: cover;
     background-position: center;
 }
@@ -160,7 +160,7 @@ hr.small {
     position: relative;
     z-index: 1;
     flex: 0 0 auto; /* Prevent text box from stretching */
-    margin-right: auto; /* Push text box to the left */
+    margin-right: bottom left auto; /* Push text box to the left */
 }
 
 .why-choose-card {
