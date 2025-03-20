@@ -143,15 +143,15 @@ hr.small {
     align-items: flex-start; /* Align items to the top */
     background-image: url('assets/images/Blue Orange and White Illustrative Marketing Video (2).mp4'); /* Fallback background image */
     background-size: cover;
-    background-position: fill;
+    background-position: centre;
 }
 
 .why-choose-video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 400%;
+    height: 400%;
     object-fit: cover;
     z-index: 0;
 }
