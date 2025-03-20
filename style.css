@@ -141,7 +141,7 @@ hr.small {
     min-height: 450px; /* Adjusted to better match the second screenshot's aspect ratio */
     display: flex;
     align-items: flex-start; /* Align items to the top */
-    background-image: url('assets/images/why-choose-bg.jpg'); /* Fallback background image */
+    background-image: url('assets/images/Blue Orange and White Illustrative Marketing Video (2).mp4'); /* Fallback background image */
     background-size: cover;
     background-position: center;
 }
