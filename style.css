@@ -55,11 +55,13 @@ hr.small {
 
 .hero-section h1 {
     font-size: 70px;
+    font-weight: 700;
     margin-bottom: 16px;
 }
 
 .hero-section p {
     font-size: 22px;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
@@ -80,6 +82,7 @@ hr.small {
 .about-section p {
     font-size: 16px;
     line-height: 1.5;
+    color: #666;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -106,6 +109,7 @@ hr.small {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .why-choose .why-choose-text {
@@ -115,9 +119,9 @@ hr.small {
     border-radius: 8px;
 }
 
-.why-choose h2 {
+.why-choose .why-choose-text h2 {
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700;
     color: #000;
     text-align: left;
     margin-bottom: 10px;
@@ -130,10 +134,51 @@ hr.small {
     margin-bottom: 10px;
 }
 
-.why-choose p {
+.why-choose .why-choose-text p {
     font-size: 16px;
     color: #666;
     text-align: left;
+}
+
+.why-choose .why-choose-right {
+    max-width: 400px;
+    text-align: right;
+}
+
+.why-choose .why-choose-right h3 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    -webkit-text-stroke: 2px #1872ed;
+    text-stroke: 2px #1872ed;
+    margin-bottom: 15px;
+}
+
+.why-choose .why-choose-right p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.why-choose .why-choose-right img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.why-choose .why-choose-right .learn-more {
+    display: inline-block;
+    background-color: #1872ed;
+    color: #fff;
+    padding: 10px 30px;
+    width: 150px;
+    height: 40px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 /* Services Section */
@@ -381,4 +426,77 @@ hr.small {
     font-size: 24px;
     display: none;
     text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 50px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    .why-choose .why-choose-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .why-choose .why-choose-right {
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .why-choose .why-choose-right h3 {
+        font-size: 40px;
+    }
+
+    .why-choose .why-choose-right p {
+        font-size: 16px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        flex: 1 1 100%;
+    }
+
+    .footer-layout-1-sides {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .side1, .side2 {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .navPages {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 40px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .service-card {
+        flex: 1 1 100%;
+    }
+
+    .testimonial-card {
+        flex: 1 1 100%;
+    }
 }
