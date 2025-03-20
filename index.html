@@ -1,65 +1,71 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="At J2W, we are dedicated to boosting and refining your business performance through strategic digital marketing and branding. Our mission is to bring your business into the spotlight and drive substantial growth by leveraging our market expertise and innovative solutions. Partner with us today.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="At J2W, we are dedicated to boosting and refining your business performance through strategic digital marketing and branding.">
     <meta name="keywords" content="Digital Marketing, Branding, Promotion, Web Design, Web Host, trending, New, Marketing">
     <title>J2W</title>
-
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <!-- Swiper for Carousel -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <!-- AOS for Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">J2W</div>
+            <ul class="nav-links">
+                <li><a href="#page-top">Home</a></li>
+                <li><a href="#section-about">About</a></li>
+                <li><a href="#section-services">Store</a></li>
+                <li><a href="#section-testimonials">Testimonials</a></li>
+                <li><a href="#section-customers">Customers</a></li>
+                <li><a href="#section-contact">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Online Courses</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero-section" id="page-top">
-        <video autoplay muted loop playsinline>
-            <source src="assets/videos/VID_20240807_104159.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-content">
-            <h1>Elevate Your Brand with J2W</h1>
-            <p>Stand Out from the Rest, by a Mile</p>
+    <section id="page-top" class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Elevate Your Brand with <span>J2W</span></h1>
+                <p>Stand Out from the Rest, by a Mile</p>
+            </div>
+            <video autoplay muted loop playsinline class="hero-video" data-aos="fade-up">
+                <source src="assets/videos/hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-section" id="section-about">
+    <section id="section-about" class="about">
         <div class="container" data-aos="fade-up">
             <h2>About J2W</h2>
             <hr class="small">
-            <img src="assets/images/j2w-logo.png" alt="J2W Logo">
-            <p>At J2W, we are dedicated to boosting and refining your business performance through strategic digital marketing and branding. Our mission is to bring your business into the spotlight and drive substantial growth by leveraging our market expertise and innovative solutions. Partner with us today.</p>
+            <p>At J2W, we are dedicated to boosting and refining your business performance through strategic digital marketing and branding. Our mission is to bring your vision to life with creative and innovative solutions. Partner with us to experience unmatched creativity and results.</p>
         </div>
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="why-choose" id="section-why-choose">
-        <video autoplay muted loop playsinline>
-            <source src="assets/videos/why-choose-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <section class="why-choose">
         <div class="container">
             <div class="why-choose-content" data-aos="fade-up">
+                <video autoplay muted loop playsinline class="why-choose-video">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="why-choose-text">
-                    <h2>Why Choose Us?</h2>
-                    <div class="line"></div>
-                    <p>Transforming Visions into Reality</p>
-                </div>
-                <div class="why-choose-right">
-                    <h3>DIGITAL MARKETING</h3>
-                    <p>Our digital marketing strategy focuses on leveraging social media platforms to engage with our audience and drive brand awareness.</p>
-                    <img src="assets/images/j2w-logo.png" alt="J2W Logo">
-                    <a href="#" class="learn-more">Learn More</a>
+                    <div class="why-choose-card">
+                        <h2>Why Choose Us?</h2>
+                        <div class="line"></div>
+                        <p>Transforming Visions into Reality</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,8 +74,10 @@
     <!-- Services Section -->
     <section id="section-services" class="services">
         <div class="container">
-            <h2>Services</h2>
-            <hr class="small">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Services</h2>
+                <hr class="small">
+            </div>
             <div class="services-grid" data-aos="fade-up">
                 <div class="service-card">
                     <a href="#">
@@ -96,12 +104,14 @@
     <!-- Testimonials Section -->
     <section id="section-testimonials" class="testimonials">
         <div class="container">
-            <h2>Testimonials</h2>
-            <hr class="small">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Testimonials</h2>
+                <hr class="small">
+            </div>
             <div class="testimonials-grid" data-aos="fade-up">
                 <div class="testimonial-card">
                     <blockquote>
-                        <p>J2W helped our business thrive by implementing creative and effective marketing strategies. Highly recommend!</p>
+                        <p><i class="quote-left"></i>J2W helped our business thrive by implementing creative and effective marketing strategies. Highly recommend!<i class="quote-right"></i></p>
                         <div class="testimonial-img" style="background-image: url('assets/images/henties-testimonial.jpg');"></div>
                         <h4>Henties</h4>
                         <div class="rating-area">★★★★★</div>
@@ -109,7 +119,7 @@
                 </div>
                 <div class="testimonial-card">
                     <blockquote>
-                        <p>Thanks to J2W’s branding solutions, our company now stands out in the crowded marketplace. Their approach is truly unique.</p>
+                        <p><i class="quote-left"></i>Thanks to J2W’s branding solutions, our company now stands out in the crowded marketplace. Their approach is truly unique.<i class="quote-right"></i></p>
                         <div class="testimonial-img" style="background-image: url('assets/images/white-operating-solutions-testimonial.jpg');"></div>
                         <h4>White Operating Solutions</h4>
                         <div class="rating-area">★★★★★</div>
@@ -117,7 +127,7 @@
                 </div>
                 <div class="testimonial-card">
                     <blockquote>
-                        <p>Their lead generation tactics are superb! We saw a significant increase in new leads and conversions. A game-changer!</p>
+                        <p><i class="quote-left"></i>Their lead generation tactics are superb! We saw a significant increase in new leads and conversions. A game-changer!<i class="quote-right"></i></p>
                         <div class="testimonial-img" style="background-image: url('assets/images/sa-dairy-factory-shop-testimonial.jpg');"></div>
                         <h4>SA Dairy Factory Shop</h4>
                         <div class="rating-area">★★★★★</div>
@@ -130,8 +140,10 @@
     <!-- Customers Section -->
     <section id="section-customers" class="customers">
         <div class="container">
-            <h2>Customers</h2>
-            <hr class="small">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Customers</h2>
+                <hr class="small">
+            </div>
             <div class="swiper-container" data-aos="fade-up">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -152,43 +164,47 @@
     <!-- Contact Section -->
     <section id="section-contact" class="contact">
         <div class="container">
-            <h2>Contact</h2>
-            <hr class="small">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact</h2>
+                <hr class="small">
+            </div>
             <div class="contact-container" data-aos="fade-up">
                 <div class="contact-info">
                     <div class="contact-details">
-                        <label>Email</label>
-                        <a href="mailto:jaun@j2wbranding.com">jaun@j2wbranding.com</a>
+                        <label>Email</label><br>
+                        <a href="mailto:jaun@j2wbranding.com"><i class="icon envelope"></i>jaun@j2wbranding.com</a>
                     </div>
                     <div class="contact-details">
-                        <label>Contact Info</label>
-                        <a href="tel:+27760355295">+27- 76 035 5295 - Owner</a>
+                        <label>Contact Info</label><br>
+                        <a href="tel:+27760355295"><i class="icon phone"></i><span dir="ltr">+27- 76 035 5295</span> - Owner</a>
                     </div>
                     <div class="contact-details">
-                        <label>Address</label>
+                        <label>Address</label><br>
                         <ul>
                             <li>Cape Town, South Africa</li>
-                            <li>Mon-Fri - 08:00-19:00</li>
+                            <li><i class="icon clock"></i>Mon-Fri - 08:00-19:00</li>
                         </ul>
                     </div>
                     <ul class="social-details">
-                        <li><a href="https://www.facebook.com/profile.php?id=61561740595029" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61561740595029" target="_blank"><i class="icon facebook"></i></a></li>
                     </ul>
                 </div>
                 <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="contact_name" placeholder="Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="contact_phone" placeholder="Phone">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="contact_name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="contact_phone" placeholder="Phone">
+                        </div>
                     </div>
                     <div class="form-group">
                         <input type="email" name="contact_email" placeholder="Email address" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="contact_message" placeholder="Message"></textarea>
+                        <textarea name="contact_message" placeholder="Message" style="min-height: 100px;"></textarea>
                     </div>
-                    <button type="submit">Contact Us</button>
+                    <button type="submit" class="btn">Contact Us</button>
                 </form>
             </div>
             <div class="map" data-aos="fade-up">
@@ -198,80 +214,40 @@
     </section>
 
     <!-- Footer -->
-    <footer class="global_footer">
+    <footer>
         <div class="container">
-            <div class="footer-layout-1-sides">
-                <div class="side1">
-                    <span class="footer_name">J2W</span>
+            <div class="footer-row">
+                <div class="footer-side1">
+                    <span class="footer-name">J2W</span>
                     <div>Copyright © 2025 All rights reserved</div>
                 </div>
-                <div class="side2">
-                    <ul class="navPages">
-                        <li><a href="#page-top">Home</a></li>
-                        <li><a href="#section-about">About</a></li>
-                        <li><a href="#section-testimonials">Testimonials</a></li>
-                        <li><a href="#section-customers">Customers</a></li>
-                        <li><a href="#section-contact">Contact</a></li>
+                <div class="footer-side2">
+                    <ul class="social-details">
+                        <li><a href="https://www.facebook.com/profile.php?id=61561740595029" target="_blank"><i class="icon facebook"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
+        <nav class="navbar footer-nav">
+            <div class="container">
+                <div class="logo">J2W</div>
+                <ul class="nav-links">
+                    <li><a href="#page-top">Home</a></li>
+                    <li><a href="#section-about">About</a></li>
+                    <li><a href="#section-services">Store</a></li>
+                    <li><a href="#section-testimonials">Testimonials</a></li>
+                    <li><a href="#section-customers">Customers</a></li>
+                    <li><a href="#section-contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </footer>
 
     <!-- Go to Top Button -->
-    <a id="gotoTop" class="gotoTop" href="#page-top">↑</a>
+    <a id="gotoTop" class="gotoTop" href="#page-top"><i class="icon angle-up"></i></a>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- Custom JS -->
-    <script>
-        // Initialize AOS
-        AOS.init();
-
-        // Initialize Swiper
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 5,
-            spaceBetween: 10,
-            autoplay: {
-                delay: 3000,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                767: {
-                    slidesPerView: 3,
-                },
-                480: {
-                    slidesPerView: 1,
-                }
-            }
-        });
-
-        // Go to Top Button
-        window.onscroll = function() {
-            var gotoTop = document.getElementById('gotoTop');
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                gotoTop.style.display = 'block';
-            } else {
-                gotoTop.style.display = 'none';
-            }
-        };
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
