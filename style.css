@@ -100,25 +100,11 @@ body {
     margin-top: 10px;
 }
 
-.hero-computer {
+.hero-video {
     flex: 1;
     max-width: 50%;
-    position: relative;
-}
-
-.computer-frame {
-    width: 100%;
     height: auto;
-    display: block;
-}
-
-.computer-screen-video {
-    position: absolute;
-    top: 10%; /* Adjust based on the computer's screen position */
-    left: 15%; /* Adjust based on the computer's screen position */
-    width: 70%; /* Adjust to fit the screen area */
-    height: 60%; /* Adjust to fit the screen area */
-    object-fit: cover; /* Ensure the video fills the screen area */
+    background: none; /* Ensure no background is applied to the video */
 }
 
 /* Responsive Design */
@@ -140,7 +126,7 @@ body {
         font-size: 18px;
     }
 
-    .hero-computer {
+    .hero-video {
         max-width: 100%;
         margin-top: 20px;
     }
