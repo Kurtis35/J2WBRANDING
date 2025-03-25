@@ -67,8 +67,9 @@ body {
 .hero {
     text-align: left;
     padding: 100px 20px;
-    background-color: var(--modules_color_second);
+    background-color: var(--modules_color_second); /* White background */
     min-height: 400px;
+    position: relative;
 }
 
 .hero .container {
@@ -99,15 +100,51 @@ body {
     margin-top: 10px;
 }
 
-.hero-video {
+.hero-computer {
     flex: 1;
     max-width: 50%;
-    border: none;
-    background: transparent;
-    outline: none;
-    box-shadow: none;
+    position: relative;
 }
 
+.computer-frame {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.computer-screen-video {
+    position: absolute;
+    top: 10%; /* Adjust based on the computer's screen position */
+    left: 15%; /* Adjust based on the computer's screen position */
+    width: 70%; /* Adjust to fit the screen area */
+    height: 60%; /* Adjust to fit the screen area */
+    object-fit: cover; /* Ensure the video fills the screen area */
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .hero-computer {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
 /* About Section */
 .about {
     padding: 100px 20px;
