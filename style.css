@@ -67,9 +67,8 @@ body {
 .hero {
     text-align: left;
     padding: 100px 20px;
-    background-color: var(--modules_color_second); /* White background */
+    background-color: var(--modules_color_second);
     min-height: 400px;
-    position: relative;
 }
 
 .hero .container {
@@ -103,33 +102,10 @@ body {
 .hero-video {
     flex: 1;
     max-width: 50%;
-    height: auto;
-    background: none; /* Ensure no background is applied to the video */
-}
-
-/* Responsive Design */
-@media (max-width: 767px) {
-    .hero .container {
-        flex-direction: column;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 45px;
-    }
-
-    .hero-content p {
-        font-size: 18px;
-    }
-
-    .hero-video {
-        max-width: 100%;
-        margin-top: 20px;
-    }
+    border: none;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
 }
 /* About Section */
 .about {
