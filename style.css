@@ -17,7 +17,7 @@
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
@@ -115,7 +115,7 @@ body {
 
 .hero-computer {
     flex: 1;
-    max-width: 50%;
+    max-width: 40%; /* Reduced from 50% to revert to a smaller size */
     position: relative;
     overflow: hidden;
 }
@@ -186,7 +186,7 @@ hr.small {
 .why-choose-content {
     position: relative;
     width: 100%;
-    min-height: 500px;
+    min-height: 400px; /* Reduced from 500px to revert to a smaller size */
     display: flex;
     align-items: flex-start;
     background-image: url('assets/images/why-choose-bg.jpg');
@@ -365,16 +365,44 @@ hr.small {
 .customers {
     padding: 100px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #1e3a8a 0%, #6b7280 100%);
-    color: #ffffff;
+    background-color: var(--modules_color_second); /* Match the white background of other sections */
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
+}
+
+.customers::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(24, 114, 237, 0.1) 0%, rgba(255, 255, 255, 0) 50%); /* Subtle overlay for modern look */
+    z-index: 0;
+}
+
+.customers .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #000; /* Black text for contrast */
+}
+
+hr.small {
+    width: 50px;
+    border-top: 2px solid var(--global_main_color);
+    margin: 20px auto;
 }
 
 .swiper-container {
     max-width: 100%;
-    padding: 20px 0;
+    padding: 40px 0; /* Increased padding for a more spacious look */
     overflow: hidden;
 }
 
@@ -385,12 +413,20 @@ hr.small {
 .swiper-slide {
     text-align: center;
     width: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
 }
 
 .swiper-slide img {
     max-width: 150px;
     height: auto;
     background: none;
+    filter: grayscale(50%); /* Subtle grayscale for modern look */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-slide:hover img {
+    filter: grayscale(0%); /* Full color on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .swiper-pagination {
@@ -399,8 +435,10 @@ hr.small {
 }
 
 .swiper-pagination-bullet {
-    background: #ffffff;
+    background: #666;
     opacity: 0.5;
+    width: 10px;
+    height: 10px;
 }
 
 .swiper-pagination-bullet-active {
@@ -622,19 +660,19 @@ footer {
     }
 
     .hero-computer {
-        max-width: 100%;
+        max-width: 80%; /* Slightly larger on mobile for visibility */
         margin-top: 20px;
     }
 
     .why-choose-content {
         flex-direction: column;
         text-align: center;
-        min-height: 400px;
+        min-height: 300px; /* Adjusted for mobile */
     }
 
     .why-choose-video {
         height: 100%;
-        min-height: 400px;
+        min-height: 300px;
     }
 
     .why-choose-text {
