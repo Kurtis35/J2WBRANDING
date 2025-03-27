@@ -121,36 +121,23 @@ body {
 }
 
 .about {
-    padding: 50px 20px; /* Reduced padding */
-    text-align: center;
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-    background-image: url('assets/images/social-media-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 300px; /* Reduced from 400px */
-}
-
-.about-content {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px; /* Reduced from 40px */
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Responsive Design */
-@media (max-width: 767px) {
-    .about {
-        min-height: 250px; /* Reduced from 300px */
+        padding: 30px 15px; /* Further reduced for mobile */
+        min-height: 200px; /* Reduced from 250px */
     }
 
     .about-content {
-        padding: 15px; /* Reduced from 20px */
+        padding: 10px; /* Further reduced from 15px */
+        max-width: 90%; /* Adjusted for mobile */
     }
-}
+
+    .about h2 {
+        font-size: 24px; /* Reduced from 28px */
+    }
+
+    .about p {
+        font-size: 14px; /* Reduced from 16px */
+    }
+
 /* Why Choose Us Section */
 .why-choose {
     padding: 100px 20px;
