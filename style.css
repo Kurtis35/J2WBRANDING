@@ -349,11 +349,10 @@ hr.small {
 .customers {
     padding: 100px 20px;
     text-align: center;
-    background-color: var(--modules_color_second);
+    background-color: var(--modules_color_second); /* Solid white background */
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    position: relative;
 }
 
 .customers::before {
