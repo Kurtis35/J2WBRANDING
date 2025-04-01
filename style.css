@@ -152,11 +152,13 @@ hr.small {
 }
 
 .about-image img {
-    max-width: 100%;
+    max-width: 600px; /* Reduced from 100% to make the image smaller */
+    width: 100%; /* Ensure it scales responsively */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 /* Why Choose Us Section */
 .why-choose {
     padding: 100px 20px;
