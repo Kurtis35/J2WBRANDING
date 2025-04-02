@@ -167,151 +167,9 @@
         </div>
     </section>
 
-    <title>Contact Section</title>
-    <style>
-        /* General styling for the contact section */
-        .contact-section {
-            background-color: #f9f9f9;
-            padding: 40px 20px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Header styling */
-        .contact-header h2 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #000;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .contact-header hr {
-            width: 50px;
-            border: 2px solid #007BFF;
-            margin: 0 auto 20px;
-        }
-
-        /* Map section */
-        .map-container {
-            margin-bottom: 30px;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 400px;
-            border: 0;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Contact container */
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Contact information */
-        .contact-info-left,
-        .contact-info-right {
-            text-align: left;
-        }
-
-        .contact-info-left p,
-        .contact-info-right p {
-            font-size: 16px;
-            color: #333;
-            margin: 5px 0;
-        }
-
-        .contact-info-left a,
-        .contact-info-right a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .contact-info-left a:hover,
-        .contact-info-right a:hover {
-            text-decoration: underline;
-        }
-
-        /* Contact form */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form label {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .contact-form button {
-            width: 100%;
-            padding: 15px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Footer elements */
-        .footer-elements {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #666;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .footer-elements a {
-            color: #007BFF;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .footer-elements a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <section class="contact-section" id="contact">
-        <!-- Header -->
+   <!-- Contact Section -->
+    <section id="section-contact" class="contact">
+        <!-- Contact Header -->
         <div class="contact-header">
             <h2>CONTACT</h2>
             <hr>
@@ -344,22 +202,46 @@
 
             <button type="submit">CONTACT US</button>
         </form>
-
-        <!-- Footer Elements -->
-        <div class="footer-elements">
-            <div>J2W</div>
-            <div>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#store">Store</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#customers">Customers</a>
-                <a href="#contact">Contact</a>
-                <a href="#services">Services</a>
-                <a href="#online-courses">Online Courses</a>
-            </div>
-            <div>&copy; 2023 J2W - All Rights Reserved</div>
-        </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-side1">
+                    <span class="footer-name">J2W</span>
+                    <div>Copyright © 2025 All rights reserved</div>
+                </div>
+                <div class="footer-side2">
+                    <ul class="social-details">
+                        <li><a href="https://www.facebook.com/profile.php?id=61561740595029" target="_blank"><i class="icon facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar footer-nav">
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/images/J2W_LOGO-removebg-preview.png" alt="J2W Logo" class="footer-logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#page-top">Home</a></li>
+                    <li><a href="#section-about">About</a></li>
+                    <li><a href="#section-services">Services</a></li>
+                    <li><a href="#section-testimonials">Testimonials</a></li>
+                    <li><a href="#section-customers">Customers</a></li>
+                    <li><a href="#section-contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+
+    <!-- Go to Top Button -->
+    <a id="gotoTop" class="gotoTop" href="#page-top"><i class="icon angle-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
