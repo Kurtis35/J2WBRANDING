@@ -124,14 +124,46 @@ body {
 .about {
     padding: 100px 20px;
     text-align: center;
-    background-color: var(--modules_color);
+    background-image: url('assets/images/social-media-bg.jpg'); /* Background image with social media icons */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixed background for a parallax effect */
+    position: relative;
     width: 100%;
     box-sizing: border-box;
 }
 
-.about h2 {
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text readable */
+    backdrop-filter: blur(5px); /* Blur effect for the background */
+    z-index: 0;
+}
+
+.about .container {
+    position: relative;
+    z-index: 1;
+}
+
+.about-content {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h2 {
     font-size: 36px;
+    font-weight: bold;
     margin-bottom: 10px;
+    color: #000;
 }
 
 hr.small {
@@ -140,23 +172,10 @@ hr.small {
     margin: 20px auto;
 }
 
-.about p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 18px;
+.about-content p {
+    font-size: 16px;
     color: #555;
-}
-
-.about-image {
-    margin-top: 30px;
-}
-
-.about-image img {
-    max-width: 700px; /* Reduced from 100% to make the image smaller */
-    width: 100%; /* Ensure it scales responsively */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
 }
 
 /* Why Choose Us Section */
