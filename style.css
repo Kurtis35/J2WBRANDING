@@ -849,25 +849,12 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 767px) {
-    .navbar .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-end;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .nav-links li {
-        margin: 5px 0;
-    }
-
+/* Tablets and smaller (max-width: 1024px) */
+@media (max-width: 1024px) {
     .hero .container {
         flex-direction: column;
+        padding: 0 10px;
     }
 
     .hero-content {
@@ -876,7 +863,69 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 45px;
+        font-size: 50px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .hero-video {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .why-choose-content {
+        min-height: 350px;
+    }
+
+    .why-choose-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .services-grid, .testimonials-grid, .portfolio-grid, .specialized-services-content {
+        gap: 20px;
+    }
+
+    .service-card, .testimonial-card, .portfolio-item, .specialized-service {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/* Mobile devices (max-width: 767px) */
+@media (max-width: 767px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+        font-size: 18px; /* Larger tap target */
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
     }
 
     .hero-content p {
@@ -885,7 +934,24 @@ footer {
 
     .hero-video {
         max-width: 100%;
-        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .about {
+        padding: 60px 10px;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .why-choose {
+        padding: 60px 10px;
     }
 
     .why-choose-content {
@@ -904,7 +970,7 @@ footer {
     }
 
     .why-choose-card {
-        width: 80%;
+        width: 100%;
         padding: 15px;
     }
 
@@ -916,22 +982,45 @@ footer {
         font-size: 14px;
     }
 
-    .services-grid, .testimonials-grid {
+    .services, .testimonials, .customers, .contact, .service-hero, .service-description, 
+    .service-portfolio, .specialized-services, .faq {
+        padding: 60px 10px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .services-grid, .testimonials-grid, .portfolio-grid, .specialized-services-content {
         flex-direction: column;
         align-items: center;
     }
 
-    .service-card, .testimonial-card {
+    .service-card, .testimonial-card, .portfolio-item, .specialized-service {
         width: 100%;
         max-width: 300px;
     }
 
-    .contact-container {
-        flex-direction: column;
+    .swiper-container {
+        padding: 20px 0;
     }
 
-    .form-row {
+    .swiper-slide img {
+        max-width: 120px;
+    }
+
+    .contact-container {
         flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-info, .contact-form {
+        min-width: 100%;
+    }
+
+    .contact-form .btn {
+        padding: 10px;
+        font-size: 14px;
     }
 
     .footer-row {
@@ -939,7 +1028,105 @@ footer {
         text-align: center;
     }
 
-    .logo {
+    .footer-side1, .footer-side2 {
+        flex: none;
+    }
+
+    .footer-nav .container {
+        flex-direction: column;
+    }
+
+    .footer-logo {
         margin-bottom: 10px;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-video {
+        max-width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .why-choose-card {
+        width: 100%;
+    }
+
+    .why-choose-text h2 {
+        font-size: 20px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .service-card h3, .testimonial-card h4, .portfolio-item h3, .specialized-service h3 {
+        font-size: 16px;
+    }
+
+    .testimonial-card p {
+        font-size: 14px;
+    }
+
+    .swiper-slide img {
+        max-width: 100px;
+    }
+
+    .contact-details a, .contact-details ul li {
+        font-size: 13px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 13px;
+    }
+
+    .contact-form .btn {
+        font-size: 13px;
+    }
+
+    .footer-name {
+        font-size: 20px;
+    }
+}
+
+/* Extra small devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .about-content {
+        padding: 15px;
+    }
+
+    .section-header h2 {
+        font-size: 20px;
+    }
+
+    .why-choose-text h2 {
+        font-size: 18px;
+    }
+
+    .service-card, .testimonial-card, .portfolio-item, .specialized-service {
+        padding: 15px;
     }
 }
