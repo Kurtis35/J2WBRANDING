@@ -12,21 +12,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">J2W</div>
-            <ul class="nav-links">
-                <li><a href="#page-top">Home</a></li>
-                <li><a href="#section-about">About</a></li>
-                <li><a href="#section-services">Services</a></li>
-                <li><a href="#section-testimonials">Testimonials</a></li>
-                <li><a href="#section-customers">Customers</a></li>
-                <li><a href="#section-contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">J2W</div>
+        <button class="nav-toggle">☰</button>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#page-top" class="dropdown-toggle">Home</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#page-top">Top</a></li>
+                    <li><a href="#section-about">About</a></li>
+                    <li><a href="#section-contact">Contact</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#section-services" class="dropdown-toggle">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="social-media-digital-marketing.html">Social Media & Digital Marketing</a></li>
+                    <li><a href="web-branding-development.html">Web & Branding Development</a></li>
+                    <li><a href="clothes-banners-marketing.html">Clothes, Banners & Marketing Display Material</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#section-customers" class="dropdown-toggle">Customers</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#section-customers">Our Clients</a></li>
+                    <li><a href="#section-testimonials">Testimonials</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
     <!-- Hero Section -->
     <section id="page-top" class="hero">
         <div class="container">
@@ -78,25 +96,34 @@
             <h2>Services</h2>
             <hr class="small">
         </div>
-        <div class="services-grid" data-aos="fade-up">
-            <div class="service-card">
-                <a href="social-media-digital-marketing.html">
-                    <div class="service-image" style="background-image: url('assets/images/igor-omilaev-TyBsbtbjtEc-unsplash.jpg');"></div>
-                    <h3>Social Media & Digital Marketing</h3>
-                </a>
+        <div class="services-swiper swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="service-card">
+                        <a href="social-media-digital-marketing.html">
+                            <div class="service-image" style="background-image: url('assets/images/igor-omilaev-TyBsbtbjtEc-unsplash.jpg');"></div>
+                            <h3>Social Media & Digital Marketing</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="service-card">
+                        <a href="web-branding-development.html">
+                            <div class="service-image" style="background-image: url('assets/images/daniel-korpai-pKRNxEguRgM-unsplash.jpg');"></div>
+                            <h3>Web & Branding Development</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="service-card">
+                        <a href="clothes-banners-marketing.html">
+                            <div class="service-image" style="background-image: url('assets/images/mnz-ToLMORRb97Q-unsplash.jpg');"></div>
+                            <h3>Clothes, Banners & Marketing Display Material</h3>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <a href="web-branding-development.html">
-                    <div class="service-image" style="background-image: url('assets/images/daniel-korpai-pKRNxEguRgM-unsplash.jpg');"></div>
-                    <h3>Web & Branding Development</h3>
-                </a>
-            </div>
-            <div class="service-card">
-                <a href="clothes-banners-marketing.html">
-                    <div class="service-image" style="background-image: url('assets/images/mnz-ToLMORRb97Q-unsplash.jpg');"></div>
-                    <h3>Clothes, Banners & Marketing Display Material</h3>
-                </a>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </section>
