@@ -36,9 +36,29 @@ body {
     box-sizing: border-box;
 }
 
-/* Navigation Bar Updates */
+/* Navigation Bar */
+.navbar {
+    background-color: #000000;
+    padding: 10px 15px;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .nav-toggle {
-    display: none; /* Hidden by default on desktop */
+    display: none;
     background: none;
     border: none;
     color: #ffffff;
@@ -47,7 +67,21 @@ body {
 }
 
 .nav-links {
-    position: relative;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: var(--global_main_color);
 }
 
 .dropdown {
@@ -85,7 +119,7 @@ body {
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block; /* Show dropdown on hover for desktop */
+    display: block;
 }
 
 /* Hero Section */
