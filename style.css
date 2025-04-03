@@ -847,8 +847,67 @@ footer {
     background-size: contain;
 }
 
+/* Existing styles remain unchanged up to the responsive section */
+
 /* Responsive Design */
+@media (max-width: 1024px) {
+    /* Tablet adjustments */
+    .container {
+        max-width: 900px;
+        padding: 0 10px;
+    }
+
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .hero-video {
+        max-width: 400px;
+    }
+
+    .about {
+        padding: 80px 15px;
+    }
+
+    .about-content {
+        padding: 30px;
+    }
+
+    .why-choose {
+        padding: 80px 15px;
+    }
+
+    .why-choose-card {
+        width: 250px;
+    }
+
+    .services, .testimonials, .customers, .contact {
+        padding: 80px 15px;
+    }
+
+    .services-grid, .testimonials-grid {
+        gap: 20px;
+    }
+
+    .service-card, .testimonial-card {
+        width: 280px;
+    }
+
+    .swiper-slide img {
+        max-width: 120px;
+    }
+}
+
 @media (max-width: 767px) {
+    /* Mobile adjustments (refined from your original) */
     .navbar .container {
         flex-direction: column;
         align-items: flex-start;
@@ -856,17 +915,22 @@ footer {
 
     .nav-links {
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         width: 100%;
         margin-top: 10px;
     }
 
     .nav-links li {
-        margin: 5px 0;
+        margin: 8px 0;
+    }
+
+    .hero {
+        padding: 60px 10px;
     }
 
     .hero .container {
         flex-direction: column;
+        gap: 20px;
     }
 
     .hero-content {
@@ -875,7 +939,7 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .hero-content p {
@@ -887,15 +951,30 @@ footer {
         margin-top: 20px;
     }
 
+    .about {
+        padding: 60px 10px;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .why-choose {
+        padding: 60px 10px;
+    }
+
     .why-choose-content {
         flex-direction: column;
-        text-align: center;
-        min-height: 300px;
+        min-height: 250px;
     }
 
     .why-choose-video {
         height: 100%;
-        min-height: 300px;
+        min-height: 250px;
     }
 
     .why-choose-text {
@@ -903,7 +982,7 @@ footer {
     }
 
     .why-choose-card {
-        width: 80%;
+        width: 90%;
         padding: 15px;
     }
 
@@ -915,9 +994,18 @@ footer {
         font-size: 14px;
     }
 
+    .services, .testimonials, .customers, .contact {
+        padding: 60px 10px;
+    }
+
+    .section-header h2 {
+        font-size: 30px;
+    }
+
     .services-grid, .testimonials-grid {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
     .service-card, .testimonial-card {
@@ -925,12 +1013,17 @@ footer {
         max-width: 300px;
     }
 
-    .contact-container {
-        flex-direction: column;
+    .swiper-slide img {
+        max-width: 100px;
     }
 
-    .form-row {
+    .contact-container {
         flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-info, .contact-form {
+        min-width: 100%;
     }
 
     .footer-row {
@@ -941,4 +1034,79 @@ footer {
     .logo {
         margin-bottom: 10px;
     }
+}
+
+@media (max-width: 480px) {
+    /* Small mobile adjustments */
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-video {
+        max-width: 100%;
+    }
+
+    .about {
+        padding: 40px 10px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .why-choose {
+        padding: 40px 10px;
+    }
+
+    .why-choose-card {
+        width: 100%;
+    }
+
+    .services, .testimonials, .customers, .contact {
+        padding: 40px 10px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .service-card h3, .testimonial-card h4 {
+        font-size: 16px;
+    }
+
+    .swiper-slide img {
+        max-width: 80px;
+    }
+
+    .contact-details a, .contact-details ul li {
+        font-size: 12px;
+    }
+
+    .contact-form .btn {
+        font-size: 14px;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+}
+
+/* Ensure videos scale properly on all devices */
+.hero-video, .why-choose-video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover; /* Changed to cover for better scaling */
 }
