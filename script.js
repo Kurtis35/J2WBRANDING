@@ -26,6 +26,35 @@ const swiper = new Swiper('.swiper-container', {
     }
 });
 
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    autoplay: {
+        delay: 3000,
+    },
+    centerSlides: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 4,
+        },
+        767: {
+            slidesPerView: 3,
+        },
+        480: {
+            slidesPerView: 1,
+        }
+    }
+});
+
+// Reinitialize Swiper on window resize
+window.addEventListener('resize', () => {
+    swiper.update();
+});
+
 // Form submission
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
