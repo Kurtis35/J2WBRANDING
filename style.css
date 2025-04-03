@@ -36,43 +36,56 @@ body {
     box-sizing: border-box;
 }
 
-/* Navigation Bar */
-.navbar {
-    background-color: #000000;
-    padding: 10px 20px;
-    z-index: 1000;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
+/* Navigation Bar Updates */
+.nav-toggle {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
     color: #ffffff;
     font-size: 24px;
-    font-weight: bold;
+    cursor: pointer;
 }
 
 .nav-links {
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
     list-style: none;
-    display: flex;
-    gap: 15px;
+    padding: 10px;
     margin: 0;
-    padding: 0;
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
-.nav-links a {
+.dropdown-menu li a {
     color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
+    padding: 8px 15px;
+    display: block;
+    font-size: 14px;
 }
 
-.nav-links a:hover {
+.dropdown-menu li a:hover {
     color: var(--global_main_color);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover for desktop */
 }
 
 /* Hero Section */
@@ -304,6 +317,45 @@ hr.small {
 .service-card h3 {
     font-size: 18px;
     margin-top: 15px;
+}
+/* Services Swiper */
+.services-swiper {
+    max-width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.services-swiper .swiper-slide {
+    text-align: center;
+    width: 300px; /* Fixed width for consistency */
+    transition: transform 0.3s ease;
+}
+
+.services-swiper .service-card {
+    margin: 0 auto;
+    background-color: var(--modules_color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.services-swiper .swiper-slide:hover .service-card {
+    transform: translateY(-10px);
+}
+
+.services-swiper .swiper-pagination {
+    margin-top: 20px;
+}
+
+.services-swiper .swiper-pagination-bullet {
+    background: #666;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+}
+
+.services-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--global_main_color);
 }
 
 /* Service Hero Section (Service Pages) */
@@ -848,285 +900,74 @@ footer {
     background-size: contain;
 }
 
-/* Responsive Design */
+/* Responsive Design Updates */
 
-/* Tablets and smaller (max-width: 1024px) */
+/* Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
-    .hero .container {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 50px;
-    }
-
-    .hero-content p {
-        font-size: 20px;
-    }
-
-    .hero-video {
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    .why-choose-content {
-        min-height: 350px;
-    }
-
-    .why-choose-card {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .services-grid, .testimonials-grid, .portfolio-grid, .specialized-services-content {
-        gap: 20px;
-    }
-
-    .service-card, .testimonial-card, .portfolio-item, .specialized-service {
-        width: 90%;
-        max-width: 350px;
+    .services-swiper .swiper-slide {
+        width: 280px;
     }
 }
 
 /* Mobile devices (max-width: 767px) */
 @media (max-width: 767px) {
-    .navbar .container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+    .nav-toggle {
+        display: block; /* Show hamburger menu on mobile */
     }
 
     .nav-links {
+        display: none; /* Hidden by default on mobile */
         flex-direction: column;
-        align-items: flex-start;
         width: 100%;
-        margin-top: 10px;
-        gap: 10px;
-    }
-
-    .nav-links li {
-        width: 100%;
-    }
-
-    .nav-links a {
-        display: block;
+        background-color: #000000;
+        position: absolute;
+        top: 100%;
+        left: 0;
         padding: 10px 0;
-        font-size: 18px; /* Larger tap target */
     }
 
-    .hero {
-        padding: 60px 10px;
+    .nav-links.active {
+        display: flex; /* Show when toggled */
     }
 
-    .hero-content h1 {
-        font-size: 40px;
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background-color: #1a1a1a; /* Slightly lighter for contrast */
+        box-shadow: none;
+        padding-left: 20px;
     }
 
-    .hero-content p {
-        font-size: 18px;
+    .dropdown.active .dropdown-menu {
+        display: block; /* Show when toggled on mobile */
     }
 
-    .hero-video {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-    }
-
-    .about {
-        padding: 60px 10px;
-    }
-
-    .about-content {
-        padding: 20px;
-    }
-
-    .about-content h2 {
-        font-size: 28px;
-    }
-
-    .why-choose {
-        padding: 60px 10px;
-    }
-
-    .why-choose-content {
-        flex-direction: column;
-        text-align: center;
-        min-height: 300px;
-    }
-
-    .why-choose-video {
-        height: 100%;
-        min-height: 300px;
-    }
-
-    .why-choose-text {
-        margin: 0 auto;
-    }
-
-    .why-choose-card {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .why-choose-text h2 {
-        font-size: 24px;
-    }
-
-    .why-choose-text p {
-        font-size: 14px;
-    }
-
-    .services, .testimonials, .customers, .contact, .service-hero, .service-description, 
-    .service-portfolio, .specialized-services, .faq {
-        padding: 60px 10px;
-    }
-
-    .section-header h2 {
-        font-size: 28px;
-    }
-
-    .services-grid, .testimonials-grid, .portfolio-grid, .specialized-services-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card, .testimonial-card, .portfolio-item, .specialized-service {
+    .services-swiper .swiper-slide {
         width: 100%;
         max-width: 300px;
-    }
-
-    .swiper-container {
-        padding: 20px 0;
-    }
-
-    .swiper-slide img {
-        max-width: 120px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .contact-info, .contact-form {
-        min-width: 100%;
-    }
-
-    .contact-form .btn {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .footer-row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-side1, .footer-side2 {
-        flex: none;
-    }
-
-    .footer-nav .container {
-        flex-direction: column;
-    }
-
-    .footer-logo {
-        margin-bottom: 10px;
     }
 }
 
 /* Small mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 32px;
+    .dropdown-menu li a {
+        font-size: 13px;
     }
 
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .hero-video {
-        max-width: 100%;
-    }
-
-    .about-content h2 {
-        font-size: 24px;
-    }
-
-    .about-content p {
-        font-size: 14px;
-    }
-
-    .why-choose-card {
+    .services-swiper .swiper-slide {
         width: 100%;
+        max-width: 260px;
     }
 
-    .why-choose-text h2 {
-        font-size: 20px;
-    }
-
-    .section-header h2 {
-        font-size: 24px;
-    }
-
-    .service-card h3, .testimonial-card h4, .portfolio-item h3, .specialized-service h3 {
+    .service-card h3 {
         font-size: 16px;
-    }
-
-    .testimonial-card p {
-        font-size: 14px;
-    }
-
-    .swiper-slide img {
-        max-width: 100px;
-    }
-
-    .contact-details a, .contact-details ul li {
-        font-size: 13px;
-    }
-
-    .form-group input, .form-group textarea {
-        font-size: 13px;
-    }
-
-    .contact-form .btn {
-        font-size: 13px;
-    }
-
-    .footer-name {
-        font-size: 20px;
     }
 }
 
 /* Extra small devices (max-width: 320px) */
 @media (max-width: 320px) {
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-    }
-
-    .about-content {
-        padding: 15px;
-    }
-
-    .section-header h2 {
-        font-size: 20px;
-    }
-
-    .why-choose-text h2 {
-        font-size: 18px;
-    }
-
-    .service-card, .testimonial-card, .portfolio-item, .specialized-service {
-        padding: 15px;
+    .services-swiper .swiper-slide {
+        width: 100%;
+        max-width: 240px;
     }
 }
