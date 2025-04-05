@@ -935,28 +935,170 @@ footer {
 }
 
 /* Responsive Design */
+/* Responsive Design */
+
+/* Small Phones (up to 479px) */
 @media (max-width: 479px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding: 0.75rem;
+    }
+
     .navbar .container {
-        flex-direction: column;
-        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        padding: 1rem;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1.125rem;
+        padding: 0.5rem 0;
+        display: block;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 3rem 0.75rem;
+        min-height: auto;
     }
 
     .hero .container {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
     }
 
-    .hero-content, .hero-video {
+    .hero-content {
         max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-video {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* About Section */
+    .about {
+        padding: 3rem 0.75rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose {
+        padding: 3rem 0.75rem;
+    }
+
+    .why-choose-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-choose-video {
+        position: static;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .why-choose-text {
+        margin: 1rem 0;
+    }
+
+    .why-choose-card {
+        width: 100%;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 3rem 0.75rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+        padding: 3rem 0.75rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Customers Section */
+    .customers {
+        padding: 3rem 0.75rem;
+    }
+
+    .swiper-slide img {
+        max-width: 120px;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 3rem 0.75rem;
     }
 
     .contact-container {
         flex-direction: column;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-details {
+        margin-bottom: 1rem;
+    }
+
+    .contact-details label {
+        font-size: 0.875rem;
+    }
+
+    .contact-details a, .contact-details ul li {
+        font-size: 0.75rem;
+    }
+
+    .social-details {
+        justify-content: center;
     }
 
     .map iframe {
@@ -966,10 +1108,46 @@ footer {
     .contact-form .btn {
         padding: 0.75rem;
         min-height: 3rem;
+        font-size: 0.875rem;
     }
 }
 
+/* Large Phones/Small Tablets (480px to 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Navigation */
+    .hamburger {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        padding: 1rem;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 4rem 1rem;
+    }
+
     .hero .container {
         flex-direction: column;
         text-align: center;
@@ -977,12 +1155,41 @@ footer {
 
     .hero-video {
         max-width: 80%;
+        width: 100%;
     }
 
+    /* Why Choose Us Section */
+    .why-choose-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-choose-video {
+        position: static;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .why-choose-text {
+        margin: 1rem 0;
+    }
+
+    .why-choose-card {
+        width: 80%;
+    }
+
+    /* Services Section */
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Testimonials Section */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Section */
     .contact-container {
         flex-direction: column;
     }
@@ -992,11 +1199,46 @@ footer {
     }
 }
 
-@media (min-width: 768px) {
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* Navigation */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    /* Hero Section */
     .hero .container {
         flex-direction: row;
     }
 
+    .hero-video {
+        max-width: 45%;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-card {
+        width: 70%;
+    }
+
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonials Section */
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact Section */
     .contact-container {
         flex-direction: row;
     }
@@ -1006,12 +1248,30 @@ footer {
     }
 }
 
+/* Small Desktops (1024px to 1439px) */
 @media (min-width: 1024px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .map iframe {
+        height: 25rem;
+    }
 }
 
+/* Large Desktops (1440px and up) */
 @media (min-width: 1440px) {
     .container {
         max-width: 87.5rem;
@@ -1023,5 +1283,9 @@ footer {
 
     .hero-content p {
         font-size: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 1.125rem;
     }
 }
