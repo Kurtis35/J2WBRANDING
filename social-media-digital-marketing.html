@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="J2W offers expert Social Media & Digital Marketing services to boost your online presence and drive business growth.">
-    <meta name="keywords" content="Social Media, Digital Marketing, J2W, Branding, Online Presence">
+    <meta name="description" content="J2W delivers cutting-edge Social Media & Digital Marketing services to skyrocket your brand’s online presence.">
+    <meta name="keywords" content="Social Media, Digital Marketing, J2W, Branding, Online Engagement">
     <title>Social Media & Digital Marketing - J2W</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Caladea:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,23 +17,55 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">J2W</div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
-                <li><a href="index.html#page-top">Home</a></li>
-                <li><a href="index.html#section-about">About</a></li>
-                <li><a href="index.html#section-services">Services</a></li>
-                <li><a href="index.html#section-testimonials">Testimonials</a></li>
-                <li><a href="index.html#section-customers">Customers</a></li>
-                <li><a href="index.html#section-contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="index.html#page-top" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Home <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#page-top">Top</a></li>
+                        <li><a href="index.html#section-about">About</a></li>
+                        <li><a href="index.html#section-contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#section-services" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="social-media-digital-marketing.html">Social Media & Digital Marketing</a></li>
+                        <li><a href="web-branding-development.html">Web & Branding Development</a></li>
+                        <li><a href="clothes-banners-marketing.html">Clothes, Banners & Marketing Material</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#section-clients" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Clients <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#section-clients">Our Clients</a></li>
+                        <li><a href="index.html#section-testimonials">Testimonials</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Service Hero Section -->
     <section class="service-hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-social-media-marketing-concept-44667-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="container">
-            <div class="service-hero-content" data-aos="fade-up">
-                <h1>Social Media & Digital Marketing</h1>
-                <p>Boost your online presence with our expert social media and digital marketing strategies.</p>
+            <div class="service-hero-content" data-aos="zoom-in">
+                <h1>Social Media & <span>Digital Marketing</span></h1>
+                <p>Unleash your brand’s potential with our bold, data-driven strategies.</p>
+                <a href="index.html#section-contact" class="btn hero-btn">Get Started</a>
+                <a href="index.html#section-services" class="back-btn">Back to Services</a>
             </div>
         </div>
     </section>
@@ -39,14 +73,15 @@
     <!-- Service Description Section -->
     <section class="service-description">
         <div class="container">
-            <div class="service-description-content" data-aos="fade-up">
+            <div class="service-description-content" data-aos="fade-right">
                 <div class="service-text">
-                    <h2>Transform Your Online Presence</h2>
-                    <p>At J2W, we specialize in crafting tailored social media and digital marketing strategies that amplify your brand’s reach and engagement. Our team leverages the latest trends and tools to create impactful campaigns across platforms like Instagram, Facebook, LinkedIn, and more. Whether you’re looking to increase followers, drive traffic, or boost conversions, we’ve got you covered with data-driven solutions.</p>
+                    <h2>Amplify Your Reach</h2>
+                    <hr class="small">
+                    <p>J2W crafts innovative social media and digital marketing campaigns that captivate audiences and drive results. From Instagram stories to LinkedIn ads, our team uses analytics and creativity to boost engagement, grow followers, and convert leads into loyal customers.</p>
                     <a href="index.html#section-contact" class="btn request-quote">Request a Quote</a>
                 </div>
                 <div class="service-image">
-                    <img src="assets/images/social-media-digital-marketing.jpg" alt="Social Media & Digital Marketing">
+                    <img src="https://images.unsplash.com/photo-1611162618479-0ebb5d9d4b1f" alt="Social Media Analytics Dashboard" loading="lazy" srcset="https://images.unsplash.com/photo-1611162618479-0ebb5d9d4b1f?auto=format&w=800 800w, https://images.unsplash.com/photo-1611162618479-0ebb5d9d4b1f?auto=format&w=1200 1200w">
                 </div>
             </div>
         </div>
@@ -56,24 +91,34 @@
     <section class="service-portfolio">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Browse Through Our Portfolio of Stunning Campaigns</h2>
+                <h2>Our Game-Changing Campaigns</h2>
+                <hr class="small">
             </div>
-            <div class="portfolio-grid" data-aos="fade-up">
-                <div class="portfolio-item">
-                    <img src="assets/images/portfolio-social-media-1.jpg" alt="Social Media Campaign 1">
-                    <h3>Campaign for Retail Brand</h3>
-                    <p>A successful Instagram campaign that increased engagement by 150%.</p>
+            <div class="portfolio-swiper swiper-container" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Instagram Campaign" loading="lazy">
+                            <h3>Instagram Takeover</h3>
+                            <p>Doubled engagement with a vibrant retail campaign.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1551288049-b1f3a0c3f8e7" alt="LinkedIn Ads" loading="lazy">
+                            <h3>LinkedIn Lead Gen</h3>
+                            <p>Generated 300+ B2B leads with targeted ads.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio-item">
+                            <img src="https://images.unsplash.com/photo-1523473827533-2a48d0c5d420" alt="E-commerce Ads" loading="lazy">
+                            <h3>E-commerce Surge</h3>
+                            <p>Tripled sales with a festive TikTok campaign.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="assets/images/portfolio-social-media-2.jpg" alt="Social Media Campaign 2">
-                    <h3>LinkedIn B2B Strategy</h3>
-                    <p>Generated 200+ leads for a B2B client through targeted LinkedIn ads.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="assets/images/portfolio-social-media-3.jpg" alt="Social Media Campaign 3">
-                    <h3>Facebook Ad Campaign</h3>
-                    <p>Boosted e-commerce sales by 300% with a festive season ad campaign.</p>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -82,20 +127,24 @@
     <section class="specialized-services">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Specialized Services for Social Media & Digital Marketing</h2>
+                <h2>Our Expertise</h2>
+                <hr class="small">
             </div>
             <div class="specialized-services-content" data-aos="fade-up">
-                <div class="specialized-service">
-                    <h3>Content Creation</h3>
-                    <p>We create engaging content tailored to your audience, from eye-catching graphics to compelling copy.</p>
+                <div class="specialized-service" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-palette"></i>
+                    <h3>Creative Content</h3>
+                    <p>Stunning visuals and copy that resonate with your audience.</p>
                 </div>
-                <div class="specialized-service">
-                    <h3>Ad Management</h3>
-                    <p>Our team manages your ad campaigns to maximize ROI, targeting the right audience at the right time.</p>
+                <div class="specialized-service" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Ad Campaigns</h3>
+                    <p>Targeted ads that deliver maximum ROI across platforms.</p>
                 </div>
-                <div class="specialized-service">
-                    <h3>Analytics & Reporting</h3>
-                    <p>Detailed insights and reports to track your campaign performance and optimize for better results.</p>
+                <div class="specialized-service" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Analytics</h3>
+                    <p>Actionable insights to optimize your marketing strategy.</p>
                 </div>
             </div>
         </div>
@@ -105,20 +154,21 @@
     <section class="faq">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Frequently Asked Questions</h2>
+                <h2>Your Questions Answered</h2>
+                <hr class="small">
             </div>
             <div class="faq-content" data-aos="fade-up">
                 <div class="faq-item">
-                    <h3>How long does it take to see results from a digital marketing campaign?</h3>
-                    <p>Results can vary, but typically you’ll see initial engagement within 2-4 weeks, with significant growth in 3-6 months.</p>
+                    <h3>When will I see campaign results? <i class="fas fa-chevron-down"></i></h3>
+                    <p>Engagement often spikes in 2-4 weeks, with major growth in 3-6 months.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>What platforms do you focus on for social media marketing?</h3>
-                    <p>We tailor our strategies to your audience, focusing on platforms like Instagram, Facebook, LinkedIn, Twitter, and TikTok.</p>
+                    <h3>Which platforms do you target? <i class="fas fa-chevron-down"></i></h3>
+                    <p>We focus on Instagram, LinkedIn, TikTok, and more, tailored to your audience.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Do you provide content creation services?</h3>
-                    <p>Yes, we offer full content creation services, including graphics, videos, and copywriting, to ensure your brand stands out.</p>
+                    <h3>Do you create content? <i class="fas fa-chevron-down"></i></h3>
+                    <p>Absolutely, from videos to graphics, we make your brand shine.</p>
                 </div>
             </div>
         </div>
@@ -134,32 +184,22 @@
                 </div>
                 <div class="footer-side2">
                     <ul class="social-details">
-                        <li><a href="https://www.facebook.com/profile.php?id=61561740595029" target="_blank"><i class="icon facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61561740595029" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <nav class="navbar footer-nav">
-            <div class="container">
-                <div class="logo">
-                    <img src="assets/images/J2W_LOGO-removebg-preview.png" alt="J2W Logo" class="footer-logo">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html#page-top">Home</a></li>
-                    <li><a href="index.html#section-about">About</a></li>
-                    <li><a href="index.html#section-services">Services</a></li>
-                    <li><a href="index.html#section-testimonials">Testimonials</a></li>
-                    <li><a href="index.html#section-customers">Customers</a></li>
-                    <li><a href="index.html#section-contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
     </footer>
 
     <!-- Go to Top Button -->
-    <a id="gotoTop" class="gotoTop" href="#page-top"><i class="icon angle-up"></i></a>
+    <a id="gotoTop" class="gotoTop" href="#page-top"><i class="fas fa-angle-up"></i></a>
 
+    <!-- Chat with Us Button -->
+    <a href="index.html#section-contact" class="chat-btn"><i class="fas fa-comment-dots"></i> Chat with Us</a>
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
