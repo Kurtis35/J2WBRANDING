@@ -1,112 +1,179 @@
-// Initialize AOS
 AOS.init({
-    duration: 1000,
-    once: true
+    duration: 800,
+    once: true,
+    offset: 100,
+    easing: 'ease-out-quart'
 });
 
-// Initialize Swiper for Customers carousel
-const customerSwiper = new Swiper('.customers .swiper-container', {
-    slidesPerView: 5,
-    spaceBetween: 30,
-    autoplay: {
-        delay: 3000,
-    },
-    centerSlides: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        767: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
-        480: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        }
-    }
-});
-
-// Initialize Swiper for Services carousel
 const servicesSwiper = new Swiper('.services-swiper', {
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 1,
+    spaceBetween: 15,
     autoplay: {
-        delay: 4000,
+        delay: 2500,
     },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
     breakpoints: {
-        1024: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        767: {
-            slidesPerView: 1,
-            spaceBetween: 15,
-        },
         480: {
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
         }
     }
 });
 
-// Mobile Navigation Toggle
+const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    autoplay: {
+        delay: 2500,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        }
+    }
+});
+
+const clientsSwiper = new Swiper('.clients .swiper-container', {
+    slidesPerView: 2,
+    spaceBetween: 15,
+    autoplay: {
+        delay: 2500,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        480: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 25,
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+        }
+    }
+});
+
+const portfolioSwiper = new Swiper('.portfolio-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    autoplay: {
+        delay: 2500,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        }
+    }
+});
+
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+        const isActive = navLinks.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', isActive);
+        navToggle.innerHTML = isActive ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+}
 
-// Dropdown Toggle for Mobile
 document.querySelectorAll('.dropdown-toggle').forEach(dropdown => {
     dropdown.addEventListener('click', (e) => {
         if (window.innerWidth <= 767) {
             e.preventDefault();
             const parent = dropdown.parentElement;
             parent.classList.toggle('active');
+            dropdown.setAttribute('aria-expanded', parent.classList.contains('active'));
         }
     });
 });
 
-// Form submission
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for contacting us. We have received your message and will respond to you soon.');
-    this.reset();
+document.querySelectorAll('.faq-item h3').forEach(faq => {
+    faq.addEventListener('click', () => {
+        const parent = faq.parentElement;
+        const isActive = parent.classList.toggle('active');
+        parent.style.maxHeight = isActive ? `${parent.scrollHeight}px` : '60px';
+    });
 });
 
-// Show/Hide Back to Top button
-window.addEventListener('scroll', function() {
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+window.addEventListener('scroll', debounce(() => {
     const gotoTop = document.getElementById('gotoTop');
-    if (window.scrollY > 300) {
-        gotoTop.style.display = 'block';
-    } else {
-        gotoTop.style.display = 'none';
+    if (gotoTop) {
+        gotoTop.style.display = window.scrollY > 300 ? 'block' : 'none';
     }
-});
+}, 100));
 
-// Smooth scroll for navigation links
 document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        window.scrollTo({
-            top: targetElement.offsetTop - 70,
-            behavior: 'smooth'
-        });
-        if (window.innerWidth <= 767) {
-            navLinks.classList.remove('active'); // Close menu on mobile after click
+        const href = this.getAttribute('href');
+        if (href.includes('#')) {
+            const targetId = href.substring(href.indexOf('#') + 1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        } else {
+            window.location.href = href;
+        }
+        if (window.innerWidth <= 767 && navLinks) {
+            navLinks.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', false);
+            navToggle.innerHTML = '<i class="fas fa-bars"></i>';
         }
     });
 });
